@@ -1,0 +1,290 @@
+/* ------------------------------------------------------------------
+   Clean theme for PatternDex (index_v2.html). Loaded after index.css.
+   One accent color, one font family, soft shadows, calm spacing.
+   ------------------------------------------------------------------ */
+
+:root {
+    --accent: #2f5fa8;
+    --accent-soft: #e8eef8;
+    --text: #2b2b2b;
+    --text-muted: #6b6b6b;
+    --rule: #e6e6e6;
+    --surface: #ffffff;
+    --surface-alt: #f7f8fa;
+    --radius: 10px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.theme-clean,
+.theme-clean .title,
+.theme-clean .publication-title,
+.theme-clean .publication-authors {
+    font-family: "Inter", "Open Sans", "Noto Sans", sans-serif;
+}
+
+.theme-clean {
+    color: var(--text);
+    background: var(--surface);
+    -webkit-font-smoothing: antialiased;
+}
+
+.theme-clean .title {
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+/* ---------- Hero ---------- */
+.theme-clean .hero {
+    background: linear-gradient(180deg, var(--surface-alt) 0%, var(--surface) 100%);
+}
+
+.theme-clean .hero .hero-body {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+.theme-clean .publication-title {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.theme-clean .publication-subtitle {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.theme-clean .publication-authors {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.theme-clean .publication-authors .author-block {
+    margin: 0 0.15rem;
+}
+
+.theme-clean .publication-links .button.is-dark {
+    background: var(--text);
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    transition: background 0.15s, transform 0.15s;
+    margin: 0.25rem 0.2rem;
+}
+
+.theme-clean .publication-links .button.is-dark:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+}
+
+/* ---------- Sections ---------- */
+.theme-clean .section-divided > .container {
+    border-top: 1px solid var(--rule);
+    padding-top: 2rem;
+}
+
+.theme-clean .section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Main section titles: small accent bar underneath */
+.theme-clean .title.is-2,
+.theme-clean .title.is-3,
+.theme-clean #BibTeX .title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.5rem !important;
+}
+
+.theme-clean .title.is-2::after,
+.theme-clean .title.is-3::after,
+.theme-clean #BibTeX .title::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+    margin: 0.6rem auto 0;
+}
+
+/* Sub-headings: thin accent bar on the left */
+.theme-clean .title.is-4 {
+    border-left: 3px solid var(--accent);
+    padding-left: 0.6rem;
+    font-weight: 600;
+}
+
+.theme-clean .title.is-5 {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* ---------- Text ---------- */
+.theme-clean .lead {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text);
+}
+
+.theme-clean .body-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.theme-clean .caption-text {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.theme-clean .caption-text > span[style*="bold"],
+.theme-clean .lead > span[style*="bold"] {
+    color: var(--text);
+}
+
+.theme-clean .media-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.theme-clean .video-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.theme-clean b {
+    color: var(--text);
+}
+
+/* ---------- Media ---------- */
+.theme-clean img.interpolation-image,
+.theme-clean video,
+.theme-clean #allegro-row video,
+.theme-clean .carousel-img {
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow);
+    background: var(--surface);
+}
+
+.theme-clean img.interpolation-image {
+    box-shadow: none;
+}
+
+/* Tight horizontal packing for the result grids; outer edges stay flush with the container */
+.theme-clean #allegro-row,
+.theme-clean #embodiment-carousels {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.theme-clean #allegro-row .column,
+.theme-clean #embodiment-carousels .column {
+    padding: 0.5rem 0.25rem;
+}
+
+/* ---------- Method step arrows ---------- */
+.theme-clean .step-arrow {
+    color: var(--accent);
+    opacity: 0.7;
+}
+
+/* ---------- Carousel ---------- */
+.theme-clean .carousel-btn {
+    border: 1px solid var(--rule);
+    color: var(--text);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-clean .carousel-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.theme-clean .carousel-caption {
+    color: var(--text-muted);
+}
+
+.theme-clean .carousel-dot.is-active {
+    background: var(--accent);
+}
+
+.theme-clean .hand-icon {
+    height: 2.75rem;
+}
+
+/* ---------- Tables ---------- */
+.theme-clean .table-container {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.theme-clean .results-table {
+    margin-bottom: 0;
+    font-size: 0.93rem;
+}
+
+.theme-clean .results-table thead th {
+    background: var(--surface-alt);
+    color: var(--text);
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.7rem 0.75rem;
+}
+
+.theme-clean .results-table td {
+    padding: 0.55rem 0.75rem;
+    border-color: var(--rule);
+    color: var(--text);
+}
+
+.theme-clean .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background: #fbfbfc;
+}
+
+.theme-clean .table.is-hoverable tbody tr:not(.is-selected):hover {
+    background: var(--accent-soft);
+}
+
+.theme-clean .results-table td b {
+    color: var(--accent);
+}
+
+.theme-clean .results-table .mean-row td,
+.theme-clean .results-table tr.mean-row td {
+    border-top: 2px solid #c9c9c9;
+}
+
+/* ---------- BibTeX ---------- */
+.theme-clean #BibTeX pre {
+    background: var(--surface-alt);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- Footer ---------- */
+.theme-clean .footer {
+    background: var(--surface-alt);
+    border-top: 1px solid var(--rule);
+    padding: 2rem 1.5rem;
+    color: var(--text-muted);
+}
+
+.theme-clean .footer a {
+    color: var(--accent);
+}
+
+/* Keep button labels white on the dark pills */
+.theme-clean .button b,
+.theme-clean .button span {
+    color: inherit;
+}

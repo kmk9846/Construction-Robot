@@ -1,0 +1,240 @@
+@import 'https://fonts.googleapis.com/css?family=Source Code Pro';
+@import 'https://fonts.googleapis.com/css?family=Open Sans';
+
+body {
+    font-family: "Open Sans", "Noto Sans", sans-serif;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.publication-title {
+    font-family: "Google Sans", "Open Sans", sans-serif;
+}
+
+.publication-authors {
+    font-family: "Google Sans", "Open Sans", sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-authors a {
+    color: hsl(120, 10%, 8%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+    display: inline-block;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.results-table {
+    font-size: 0.95rem;
+}
+
+.results-table th,
+.results-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.results-table th:first-child,
+.results-table td:first-child {
+    text-align: left;
+}
+
+.results-table .mean-row {
+    border-top: 2px solid #363636;
+}
+
+.results-table tr.mean-row td {
+    border-top: 2px solid #363636;
+}
+
+pre code {
+    font-family: "Source Code Pro", monospace;
+    white-space: pre-wrap;
+}
+
+.video-sub {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: normal;
+    margin-bottom: 0.4rem;
+}
+
+video {
+    background: #f5f5f5;
+}
+
+/* Cross-embodiment rows: 6 gifs per row with tight spacing */
+.embodiment-row {
+    margin-left: -0.15rem;
+    margin-right: -0.15rem;
+}
+
+.embodiment-row > .column {
+    padding: 0.15rem;
+}
+
+.embodiment-row .video-sub {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Title: "PatternDex:" on the first line, full title balanced over the next two lines */
+.publication-subtitle {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 0.5rem;
+    text-wrap: balance;
+}
+
+/* Thin rule above each main section (Abstract, Video, Method, ...) */
+.section-divided > .container {
+    border-top: 1px solid #dbdbdb;
+    padding-top: 1.5rem;
+}
+
+/* Tighter vertical rhythm between sections (Bulma default is 3rem top and bottom) */
+.section {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.hero .hero-body {
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Breathing room under subheadings (Bulma drops the margin when the title is the last child) */
+.section .title.is-4,
+.section .title.is-5 {
+    margin-bottom: 1rem !important;
+}
+
+/* Arrows between the three Method steps */
+.step-arrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 0.9rem;
+    color: #9a9a9a;
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+    .step-arrow {
+        padding: 0.25rem 0;
+    }
+    .step-arrow i {
+        transform: rotate(90deg);
+    }
+}
+
+/* Cross-embodiment carousels: one gif per hand, arrows cycle through the six objects */
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.carousel-caption {
+    color: #666;
+    font-size: 0.95rem;
+    min-width: 12rem;
+}
+
+.carousel-btn {
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    color: #363636;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.carousel-btn:hover {
+    background: #f5f5f5;
+    border-color: #b5b5b5;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.carousel-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #dbdbdb;
+    cursor: pointer;
+}
+
+.carousel-dot.is-active {
+    background: #363636;
+}
+
+/* Hand photo beside each cross-embodiment heading */
+.hand-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.hand-icon {
+    height: 3rem;
+    width: auto;
+}
+
+.hand-title-left {
+    justify-content: flex-start;
+}
+
+/* Make the hidden attribute win over Bulma display rules */
+[hidden] {
+    display: none !important;
+}
